@@ -6,6 +6,7 @@ Ensure you have installed these before working on the project:
 * PHP >= 7.2.5 - could be installed using [xampp](https://www.apachefriends.org/download.html)
 * composer  - download from [composer](https://getcomposer.org/download/)
 * Laravel >= 7.* - find download and installation instructions at [Laravel-Download](https://laravel.com/docs/7.x)
+* NPM - current version could be found at [Nodejs](https://nodejs.org/en/)
 
 ## How to Setup the Project Locally
 
