@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+p<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -75,6 +75,17 @@
                 height:90vh;
                 grid-template-columns: 20% 80%;
             }
+            .box1{
+                display: grid;
+            }
+            .info{
+                background: ivory;
+                display: grid;
+                /*height: 30%;*/
+                grid-template-rows: repeat(auto-fill);
+                
+            
+            }
 
         </style>
     </head>
@@ -95,7 +106,24 @@
             </header> 
             <main>
                 <div class="box1">
-                    <h1>Box 1</h1>
+                    
+                    <div class="info">
+                        <h2>Zolani Style</h2> 
+                        <img src="#" alt="avatar">
+                        <h4>Bio</h4>
+                        <p>This is my online store that specializes in women's apparel</p>
+
+
+                    </div>
+                    <div class="actions">
+                        <ul class="btns">
+                            <li> <a class="links" href="#"> Store front </a></li>
+                            <li> <a class="links" href="#"> Reports</a></li>
+                            <li> <a class="links" href="#"> Add items </a></li>
+                            
+
+                        </ul>
+                    </div>
                 </div>
                 <div class="box2">
                     <h1>Box 2</h1>
