@@ -26,6 +26,7 @@ Ensure you have installed these before working on the project:
 
 ### 5. Create a copy of your .env file
 * Run the command `cp .env.example .env` in the terminal
+* Alternatively run `copy .env.example .env` if using windows cmd
 
 ### 6. Generate an app encryption Key
 * In the terminal run the commnad `php artisan key:generate`
