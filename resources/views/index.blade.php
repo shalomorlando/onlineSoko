@@ -9,26 +9,28 @@
     <title>Online Soko</title>
 </head>
 <body>
-    <nav class="nav-bar">
-        <div>
+    <div class="cover">
+        <nav class="nav-bar">
+            <div>
+                <h1>Online Soko</h1>
+            </div>
+            <div>
+                <ul>
+                    <li>Lifestyle</li>
+                    <li>Home</li>
+                    <li>Wearables</li>
+                </ul>
+            </div>
+            <div>
+                <i class="fas fa-search"></i>
+                <i class="fas fa-user-alt"></i>
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+        </nav>
+        <div class="jumbo">
             <h1>Online Soko</h1>
+            <p>Premium Non-Essentials</p>
         </div>
-        <div>
-            <ul>
-                <li>Lifestyle</li>
-                <li>Home</li>
-                <li>Wearables</li>
-            </ul>
-        </div>
-        <div>
-            <i class="fas fa-search"></i>
-            <i class="fas fa-user-alt"></i>
-            <i class="fas fa-shopping-bag"></i>
-        </div>
-    </nav>
-    <div class="jumbo">
-        <h1>Online Soko</h1>
-        <p>Premium Non-Essentials</p>
     </div>
 </body>
 </html>
