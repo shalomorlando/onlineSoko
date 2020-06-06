@@ -85,10 +85,16 @@
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1.5px;
-    padding-bottom: 4px;;
+    padding-bottom: 4px;
+    cursor: pointer;
+    transition: all linear .2s;
 }
 
 .active-item{
     border-bottom: solid #E9B44C 3px;
-    color:
+}
+
+.landing-nav li:hover{
+    transition: all linear .1s;
+   color: #E9B44C;
 }

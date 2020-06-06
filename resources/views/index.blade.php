@@ -49,7 +49,7 @@
     </ul>
     <div class="product-grid">
         <div class="product-item">
-            <img src=""/>
+            <img src="https://picsum.photos/300/500"/>
             <p>Title</p>
             <h3>Ksh.500</p>
         </div>
