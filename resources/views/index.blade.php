@@ -49,22 +49,22 @@
     </ul>
     <div class="product-grid">
         <div class="product-item">
-            <img src="https://picsum.photos/300/500"/>
+            <img src="https://picsum.photos/seed/22/300/500"/>
             <p>Product title goes here</p>
             <h3>Ksh.500</p>
         </div>
         <div class="product-item">
-            <img src="https://picsum.photos/300/500"/>
+            <img src="https://picsum.photos/seed/23/300/500"/>
             <p>Product title goes here</p>
             <h3>Ksh.500</p>
         </div>
         <div class="product-item">
-            <img src="https://picsum.photos/300/500"/>
+            <img src="https://picsum.photos/seed/4/300/500"/>
             <p>Product title goes here</p>
             <h3>Ksh.500</p>
         </div>
         <div class="product-item">
-            <img src="https://picsum.photos/300/500"/>
+            <img src="https://picsum.photos/seed/353/300/500"/>
             <p>Product title goes here</p>
             <h3>Ksh.500</p>
         </div>
