@@ -32,5 +32,27 @@
             <p>Premium Non-Essentials</p>
         </div>
     </div>
+    <ul class="landing-nav">
+        <li class="active-item">
+            featured
+        </li>
+        <li>
+            history
+        </li>
+        <li>
+            cart
+        </li>
+        <li>
+            payment
+        </li>
+
+    </ul>
+    <div class="product-grid">
+        <div class="product-item">
+            <img src=""/>
+            <p>Title</p>
+            <h3>Ksh.500</p>
+        </div>
+    </div>
 </body>
 </html>

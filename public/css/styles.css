@@ -55,10 +55,6 @@
     margin: 0 2vw;
 }
 
-.nav-bar li:hover{
-    text-decoration: underline;
-}
-
 .jumbo{
     color:#fff;
     padding:50px;
@@ -73,4 +69,26 @@
     text-transform: uppercase;
     letter-spacing: 5px;
     font-weight: 500;
+}
+
+.landing-nav{
+    list-style: none;
+    padding:20px;
+    text-align: center;
+}
+
+.landing-nav li{
+    text-align: center;
+    font-size: 0.8em;
+    display: inline-block;
+    margin:0 2.5vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    padding-bottom: 4px;;
+}
+
+.active-item{
+    border-bottom: solid #E9B44C 3px;
+    color:
 }
