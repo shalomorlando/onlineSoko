@@ -50,7 +50,27 @@
     <div class="product-grid">
         <div class="product-item">
             <img src="https://picsum.photos/300/500"/>
-            <p>Title</p>
+            <p>Product title goes here</p>
+            <h3>Ksh.500</p>
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/300/500"/>
+            <p>Product title goes here</p>
+            <h3>Ksh.500</p>
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/300/500"/>
+            <p>Product title goes here</p>
+            <h3>Ksh.500</p>
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/300/500"/>
+            <p>Product title goes here</p>
+            <h3>Ksh.500</p>
+        </div>
+        <div class="product-item wide-item">
+            <img src="https://picsum.photos/300/500"/>
+            <p>Product title goes here</p>
             <h3>Ksh.500</p>
         </div>
     </div>
