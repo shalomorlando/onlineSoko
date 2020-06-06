@@ -41,7 +41,24 @@
     cursor: pointer;
     text-align: right;
     margin:0 20px;
+    transition: all linear .4s;
 }
+
+.nav-bar div:nth-child(3) i:hover{
+    cursor: pointer;
+    text-align: right;
+    margin:0 20px;
+    color:#E9B44C;
+    transform: scale(0.95);
+    transition: all linear .1s;
+}
+
+
+.nav-bar div:nth-child(3) i:active{
+    transform: scale(0.8);
+    transition: all linear .1s;
+}
+
 
 .nav-bar h1{
     text-align: left;
@@ -98,8 +115,15 @@
 }
 
 .landing-nav li:hover{
+    transform: scale(0.97);
     transition: all linear .1s;
    color: #E9B44C;
+}
+
+
+.landing-nav li:active{
+    transform: scale(0.93);
+    transition: all linear .1s;
 }
 
 .product-grid{
