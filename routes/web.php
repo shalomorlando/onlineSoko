@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/store', function () {
     return view('store');
 });
+
+Route::get('/mystore', function () {
+    return view('mystore');
+});
