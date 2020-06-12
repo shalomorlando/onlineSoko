@@ -17,11 +17,23 @@ Route::get('/', function () {
     return view('index');
 });
 
-
-Route::get('/store', function () {
-    return view('store');
-});
-
 Route::get('/mystore', function () {
     return view('mystore');
 });
+Route::get('/side', function () {
+    return view('sidebar');
+});
+
+
+Route::get('/addrecord', 'controller@index');
+Route::post('/addimage','controller@store')->name('addimage');
+Route::get('/viewpage', 'controller@display');
+/*edit table*/
+Route::get('/editimage/{id}', 'controller@edit');
+Route::put('/updateimage/{id}', 'controller@update');
+
+/* new example
+Route::get('/item', 'controller@allitems');
+Route::get('/item', 'controller@addform1');
+Route::post('/item_model','controller@add');
+*/

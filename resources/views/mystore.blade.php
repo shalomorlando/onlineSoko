@@ -15,7 +15,7 @@
 <body>
   <ul>
     <img src = "/img/logo.jpg" style="width:80px";>
-    <li style="float:right"><a href="#home">REVIEWS</a></li>
+    <li style="float:right"><a href="#home">REVIEWS</a></li>  
     <li style="float:right"><a href="#news">ORDERS</a></li>
     <li style="float:right"><a class="active" href="#about">STORE FRONT</a></li>
   </ul>
@@ -36,7 +36,7 @@
       <p class="title"><button>Dashboard</button></p>
       <p class="title"><button>Store Front</button></p>
       <p class="title"><button>Reports</button></p>
-      <p class="title"><button>Add Item</button></p>
+      <p class="title"><a href="{{ url('/add') }}">Add Item</a></p> 
     </div>
 
 </div>
