@@ -54,7 +54,7 @@
                 <p>{{$item['title']}}</p>
                 <h3>{{$item['description']}}</h3>
                 <h2>KSH.{{$item['price']}}</h2>
-                <h2 id="stock">{{$item['quantity']}} in Stock</h2>
+                <h2 id=>{{$item['quantity']}} in Stock</h2>
             </div>
             {{-- <div class="product-item wide-item">
                 <img src="https://picsum.photos/300/500"/>
