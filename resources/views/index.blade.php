@@ -48,31 +48,20 @@
 
     </ul>
     <div class="product-grid">
-        <div class="product-item">
-            <img src="https://picsum.photos/seed/22/300/500"/>
-            <p>Product title goes here</p>
-            <h3>Ksh.500</p>
-        </div>
-        <div class="product-item">
-            <img src="https://picsum.photos/seed/23/300/500"/>
-            <p>Product title goes here</p>
-            <h3>Ksh.500</p>
-        </div>
-        <div class="product-item">
-            <img src="https://picsum.photos/seed/4/300/500"/>
-            <p>Product title goes here</p>
-            <h3>Ksh.500</p>
-        </div>
-        <div class="product-item">
-            <img src="https://picsum.photos/seed/353/300/500"/>
-            <p>Product title goes here</p>
-            <h3>Ksh.500</p>
-        </div>
-        <div class="product-item wide-item">
-            <img src="https://picsum.photos/300/500"/>
-            <p>Product title goes here</p>
-            <h3>Ksh.500</p>
-        </div>
+        @foreach ($products as $item)
+            <div class="product-item">
+                <img src={{$item['product_image']}}/>
+                <p>{{$item['title']}}</p>
+                <h3>{{$item['description']}}</h3>
+                <h2>KSH.{{$item['price']}}</h2>
+                <h2 id="stock">{{$item['quantity']}} in Stock</h2>
+            </div>
+            {{-- <div class="product-item wide-item">
+                <img src="https://picsum.photos/300/500"/>
+                <p>Product title goes here</p>
+                <h3>Ksh.500</p>
+            </div> --}}
+        @endforeach
     </div>
 </body>
 </html>
