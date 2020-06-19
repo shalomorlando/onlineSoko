@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 Use App\Product;
-
+Use App\Item;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +16,7 @@ Use App\Product;
 */
 
 Route::get('/', function () {
-    $products = Product::all();
+    $products = Item::all();
     return view('index',['products'=>$products]);
 });
 
