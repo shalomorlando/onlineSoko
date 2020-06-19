@@ -13,6 +13,7 @@
 }
 
 .nav-bar{
+    width:100%;
     color:#fff;
     padding:20px 10px;
     background: rgba(31, 72, 126,0.8);
