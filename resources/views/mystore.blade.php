@@ -36,7 +36,7 @@
       <p class="title"><button>Dashboard</button></p>
       <p class="title"><button>Store Front</button></p>
       <p class="title"><button>Reports</button></p>
-      <p class="title"><a href="{{ url('/add') }}">Add Item</a></p> 
+      <p class="title"><a href="{{ url('/addrecord') }}">Add Item</a></p> 
     </div>
 
 </div>

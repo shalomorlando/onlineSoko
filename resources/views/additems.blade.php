@@ -18,9 +18,11 @@
 <h2><center>ADD ITEMS</center></h2>
        <form action="{{ route('addimage') }}" method="POST" enctype="multipart/form-data">
        {{csrf_field() }}
+
        Name <input type="text" name="name" id="name" class="form-control" /><br>
        Image <input type="file" name="image" id="image" class="form-control"/><br>
        Description <input type="text" name="description" id="description" class="form-control"/><br>
+       Quantity <input type="number" name="quantity" id="quantity" class="form-control"/><br>
        Price <input type="number" name="price" id="price" class="form-control"/><br>
        <center><input class="btn btn-primary" type="submit"  name="submit" style="" value="ADD"/></center><br>
     </form>

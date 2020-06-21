@@ -21,7 +21,7 @@
   <div class="form-group">
 
   <input type="hidden" name="id" id="id" value="{{$items->id}}">
-
+  <input type="hidden" name="store_id" id="store_id" value="{{$items->store_id}}">
     <label>Name</label>
     <input type="text" class="form-control" name="name" id="name"  placeholder="Enter name" value="{{$items->name}}">
   </div>

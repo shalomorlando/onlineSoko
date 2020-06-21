@@ -20,8 +20,10 @@ class Controller extends BaseController
     public function store(Request $request)
     {
         $item = new Item();
+        $item->quantity=$request->input('store');
         $item->name=$request->input('name');
         $item->description=$request->input('description');
+        $item->quantity=$request->input('quantity');
         $item->price=$request->input('price');
                /*storing image*/
        if($request->hasfile('image'))
@@ -43,7 +45,7 @@ class Controller extends BaseController
     public function display()
     {
         $items = Item::all();
-        return view ('viewform')->with('items', $items);
+        return view('viewform')->with('items', $items);
     }
     public function edit($id)
     {
@@ -53,7 +55,6 @@ class Controller extends BaseController
     public function update(Request $request, $id)
     {
         $items = Item::find($id);
-
         $items->name=$request->input('name');
         $items->description=$request->input('description');
         $items->price=$request->input('price');
@@ -67,7 +68,14 @@ class Controller extends BaseController
            $items->image=$filename;
        }
         $items->save();
+        echo "Saved Successfully";
         
+        return redirect('/viewpage')->with('items', $items );
+    }
+    public function delete($id)
+    {
+        $items=Item::find($id);
+        $items->delete();
         return redirect('/viewpage')->with('items', $items );
     }
 }

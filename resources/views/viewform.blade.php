@@ -20,8 +20,10 @@
                 <th>Product name</th>
                 <th>Image</th>
                 <th>Description</th>
+                <th>Quantity</th>
                 <th>Price</th>
-                <th>EDIT</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
             </thead>
             <tbody>
@@ -31,9 +33,12 @@
                    <th>{{$item->name}}</th>
                    <th><img src="{{ asset('uploads/pictures/' . $item->image)}}" width="100px" height="100px" alt="image"></th>
                    <th>{{$item->description}}</th>
+                   <th>{{$item->quantity}}</th>
                    <th>{{$item->price}}</th>
                    <th> <a href="/editimage/{{$item->id}}" class="btn btn-success" >EDIT</a></th>
+                   <th> <a href="/deleteimage/{{$item->id}}" class="btn btn-danger" >DELETE</a></th>
                </tr>
+            
              @endforeach
             </tbody>
         </table>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAdditemsTable extends Migration
+class CreateAddeditemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateAdditemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('additems', function (Blueprint $table) {
+        Schema::create('addeditems', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->mediumText('image')->nullable();
             $table->string('description');
+            $table->integer('quantity');
             $table->integer('price');
             $table->timestamps();
         });
@@ -30,6 +31,6 @@ class CreateAdditemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('additems');
+        Schema::dropIfExists('addeditems');
     }
 }

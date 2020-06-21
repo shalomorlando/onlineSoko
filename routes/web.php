@@ -34,6 +34,8 @@ Route::get('/viewpage', 'controller@display');
 /*edit table*/
 Route::get('/editimage/{id}', 'controller@edit');
 Route::put('/updateimage/{id}', 'controller@update');
+//delete content
+Route::get('/deleteimage/{id}','controller@delete');
 
 /* new example
 Route::get('/item', 'controller@allitems');
