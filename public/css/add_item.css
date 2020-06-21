@@ -3,7 +3,7 @@
 
 body {
     font-family: Georgia;
-     background: #f3f3f3;
+     background: white;
   }
   
   .wrapper
@@ -53,15 +53,34 @@ top: 0px;
   .insert
 {
 
-  margin-left: 420px;
-  margin-right: 300px;
-  margin-top: 100px;
-  width: 520px;
+width:360px;
+position: absolute;
+top:50%;
+left:50%;
+transform: translate(-50%, -50%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-height:100%x;
   font-family: arial;
-  display:inline-block;
   background-color: #fff;
+}
+.insert h2
+{
+  float:left;
+  border-bottom: 5px solid #007bff;
+  padding:10px 0;
+}
+.fields
+{
+  width:100%;
+  overflow:hidden;
+  font-size: 20px;
+  border-bottom: 1px solid #007bff;
+}
+.fields input
+{
+    border:none;
+    outline: none;
+    width:80%;
+    font-size: 18px;
 }
 
 
@@ -105,7 +124,7 @@ top: 0px;
     padding-left: 10px;
   }
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     width: 8%;
     max-height:25px;
 

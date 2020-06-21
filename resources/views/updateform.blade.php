@@ -14,33 +14,27 @@
 
 </head>
 <body>
-<div class="container">
+<div class="insert">
+<h2>EDIT ITEMS</h2><br><br>
 <form action="/updateimage/{{$items->id}}" method="POST" enctype="multipart/form-data">
 {{csrf_field() }}
 {{method_field('PUT') }}
-  <div class="form-group">
-
-  <input type="hidden" name="id" id="id" value="{{$items->id}}">
-  <input type="hidden" name="store_id" id="store_id" value="{{$items->store_id}}">
-    <label>Name</label>
-    <input type="text" class="form-control" name="name" id="name"  placeholder="Enter name" value="{{$items->name}}">
-  </div>
-  <label>Image</label>
-  <div class="input-group">
-      <div class="cutom-file">
-      <input type="file" class="custom-file-input" name="image" id="image"  placeholder="Enter name" value="{{$items->image}}">
-      <label class="custom-file-label">choose file</label>
-      </div>
- </div>
-  <div class="form-group">
-    <label>Description</label>
-    <input type="text" class="form-control" name="description" id="description"  placeholder="Enter name" value="{{$items->description}}">
-  </div>
-  <div class="form-group">
-    <label>Price</label>
-    <input type="text" class="form-control" name="price" id="price"  placeholder="Enter name" value="{{$items->price}}">
-  </div>
-  <button type="submit" class="btn btn-primary" name="submit">UPDATE</button>
+<div class="fields">
+<input type="text" name="name" id="name" class="form-control" value="{{$items->name}}" placeholder="Name"/>
+</div>
+<div class="fields">
+<input type="file" name="image" id="image" class="form-control" value="{{$items->image}}" placeholder="image"/>
+</div>
+<div class="fields">
+ <input type="text" name="description" id="description" class="form-control" value="{{$items->description}}" placeholder="Description"/>
+</div>
+<div class="fields">
+<input type="number" name="quantity" id="quantity" class="form-control" value="{{$items->quantity}}" placeholder="Quantity"/>
+</div>
+<div class="fields">
+<input type="number" name="price" id="price" class="form-control" value="{{$items->price}}" placeholder="Price"/>
+</div><br>
+       <center><input class="btn btn-primary" type="submit"  name="submit"  value="UPDATE"/></center><br>
 </form>
 </div>
 </body>

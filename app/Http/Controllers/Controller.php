@@ -57,6 +57,7 @@ class Controller extends BaseController
         $items = Item::find($id);
         $items->name=$request->input('name');
         $items->description=$request->input('description');
+        $items->quantity=$request->input('quantity');
         $items->price=$request->input('price');
                /*storing image*/
        if($request->hasfile('image'))
