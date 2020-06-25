@@ -15,19 +15,26 @@ Use App\Item;
 |
 */
 
+
+//Walela's and Josh's routes
 Route::get('/', function () {
     $products = Item::all();
     return view('index',['products'=>$products]);
 });
 
+//New experimental routes by Shalom and Nirel 
+Route::get('/store/storefront', 'StoresController@index');
+Route::get('/store/createproduct', 'StoresController@create');
+Route::post('/store/storefront', 'StoresController@store'); 
+
+
+//Esther's and Alvin's routes
 Route::get('/mystore', function () {
     return view('mystore');
 });
 Route::get('/side', function () {
     return view('sidebar');
 });
-
-
 Route::get('/addrecord', 'controller@index');
 Route::post('/addimage','controller@store')->name('addimage');
 Route::get('/viewpage', 'controller@display');

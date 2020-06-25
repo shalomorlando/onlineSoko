@@ -14,28 +14,36 @@
 
 </head>
 <body>
-<div class="insert">
-<h2>ADD ITEMS</h2><br><br>
-       <form action="{{ route('addimage') }}" method="POST" enctype="multipart/form-data">
-       {{csrf_field() }}
-       <div class="fields">
-<input type="text" name="name" id="name" class="form-control" placeholder="Name"/>
-</div>
-<div class="fields">
-<input type="file" name="image" id="image" class="form-control" placeholder="Image"/>
-</div>
-<div class="fields">
-<input type="text" name="description" id="description" class="form-control" placeholder="Description"/>
-</div>
-<div class="fields">
-<input type="number" name="quantity" id="quantity" class="form-control" placeholder="Quantity"/>
-</div>
-<div class="fields">
-<input type="number" name="price" id="price" class="form-control" placeholder="Unit Price"/>
-</div><br>
-       <center><input class="btn btn-primary" type="submit"  name="submit"  value="ADD"/></center><br>
-    </form>
-</div>
+
+       <div class="insert">
+
+              <h2>ADD ITEMS</h2><br><br>
+
+              <form action="{{ route('addimage') }}" method="POST" enctype="multipart/form-data">
+                     {{csrf_field() }}
+
+                     <div class="fields">
+
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Name"/>
+                     </div>
+
+                     <div class="fields">
+                            <input type="file" name="image" id="image" class="form-control" placeholder="Image"/>
+                     </div>
+
+                     <div class="fields">
+                            <input type="text" name="description" id="description" class="form-control" placeholder="Description"/>
+                     </div>
+                     <div class="fields">
+                            <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Quantity"/>
+                     </div>
+                     <div class="fields">
+                            <input type="number" name="price" id="price" class="form-control" placeholder="Unit Price"/>
+                     </div><br>
+                     <center><input class="btn btn-primary" type="submit"  name="submit"  value="ADD"/></center><br>
+                     
+              </form>
+       </div>
   
 </body>
 </html>
