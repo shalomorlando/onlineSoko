@@ -50,8 +50,8 @@
     <div class="product-grid">
         @foreach ($products as $item)
             <div class="product-item">
-                <img src={{$item['product_image']}}/>
-                <p>{{$item['title']}}</p>
+                <img src={{$item['image']}}/>
+                <p>{{$item['name']}}</p>
                 <h3>{{$item['description']}}</h3>
                 <h2>KSH.{{$item['price']}}</h2>
                 <h2 id=>{{$item['quantity']}} in Stock</h2>

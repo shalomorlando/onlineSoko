@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-Use App\Product;
 Use App\Item;
 
 /*
@@ -17,7 +16,7 @@ Use App\Item;
 
 Route::get('/', function () {
     $products = Item::all();
-    return view('index',['products'=>$products]);
+    return view('index')->with('products', $products);
 });
 
 Route::get('/mystore', function () {
