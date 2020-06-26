@@ -12,9 +12,13 @@
 }
 
 .nav-bar{
+    width:100%;
     color:#fff;
     padding:20px 10px;
+    background: rgba(31, 72, 126,1);
+    position: fixed;
 }
+
 
 .nav-bar div{
     display: inline-block;
@@ -72,6 +76,10 @@
     display: inline-block;
     cursor: pointer;
     margin: 0 2vw;
+}
+
+.nav-bar i{
+    
 }
 
 .jumbo{
@@ -134,8 +142,11 @@
 }
 
 .product-item{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    text-transform: capitalize;
     display: inline-block;
-    width:31%;
+    width:29%;
+    padding:10px;
     margin: 10px;
     text-align: left;
 }
@@ -148,15 +159,66 @@
 .product-item p{
     font-weight: 600;
     margin:5px 0;
-    color:rgba(0,0,0,0.5);
+    color:rgba(0,0,0,0.7);
     font-size: 0.8em;
 }
 
-.product-item h3{
-    color:rgba(0,0,0,0.7);
+.product-item h2{
+    color:rgba(0,0,0,0.8);
     font-size: 0.9em;
+    display: inline-block;
+    width:70%;
 }
 
+
+#stock{
+    
+    cursor: pointer;
+    width:100%;
+    margin: 5px 0;
+    text-align: center;
+    border:solid 1px #1F487E;
+    color:#1F487E;
+    padding:5px;
+    font-size: 0.7em;
+    border-radius: 10px;
+}
+#stock-cart{
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    width:100%;
+    margin: 5px 0;
+    text-align: center;
+    background:#1F487E;
+    color:#fff;
+    padding:5px;
+    font-size: 0.7em;
+    border-radius: 10px;
+    border:solid 1px #1F487E;
+    transition: all linear .2s;
+}
+
+#stock-cart:hover{
+    cursor: pointer;
+    background: #fff;
+    color:#1F487E;
+    transition: all linear .2s;
+    box-shadow: 0 1px 1px rgba(0,0,0,0);
+}
+
+#left{
+    position: relative;
+    float: right;
+    bottom:10vh;
+    margin-right: 10px;
+    width:30%;
+}
+
+.product-item h3{
+    margin-bottom:10px;
+    color:rgba(0,0,0,0.8);
+    font-size: 0.8em;
+    font-weight: 100;
+}
 
 .wide-item{
     width: 64%;

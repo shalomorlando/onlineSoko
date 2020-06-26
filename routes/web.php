@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+Use App\Item;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,21 +14,37 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+//Walela's and Josh's routes
 Route::get('/', function () {
-    return view('index');
+    $products = Item::all();
+    return view('index')->with('products', $products);
 });
 
-Route::get('/store', function () {
-    return view('store');
-});
+//New experimental routes by Shalom and Nirel 
+Route::get('/store/storefront', 'StoresController@index');
+Route::get('/store/createproduct', 'StoresController@create');
+Route::post('/store/storefront', 'StoresController@store'); 
 
+
+//Esther's and Alvin's routes
 Route::get('/mystore', function () {
     return view('mystore');
 });
-Route::get('/shop', function () {
-    return view('shop');
+Route::get('/side', function () {
+    return view('sidebar');
 });
-Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
-Route::get('/product', function () {
-    return view('product');
-});
+Route::get('/addrecord', 'controller@index');
+Route::post('/addimage','controller@store')->name('addimage');
+Route::get('/viewpage', 'controller@display');
+/*edit table*/
+Route::get('/editimage/{id}', 'controller@edit');
+Route::put('/updateimage/{id}', 'controller@update');
+//delete content
+Route::get('/deleteimage/{id}','controller@delete');
+
+/* new example
+Route::get('/item', 'controller@allitems');
+Route::get('/item', 'controller@addform1');
+Route::post('/item_model','controller@add');
+*/

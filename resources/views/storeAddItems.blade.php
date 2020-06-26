@@ -46,8 +46,7 @@
                 height:100px;
                 width:100px;
                 border-radius:100px;
-                margin-bottom:20px;
-                margin-top:20px;
+                margin-bottom:10px;
             }
             .sidebar h4{
                 color:white;
@@ -96,38 +95,6 @@
                 border-radius:10px;
                 align-items: center;
             }
-            .logo, .nav-links{
-                display: flex;
-            }
-            .logo{
-                flex: 1;
-                align-items: center;
-            }
-            .logo img{
-                width: 10%;
-                height: 10%;
-                border-radius: 50%;
-            }
-            .logo h4{
-                margin-left: 5px;
-                font-weight: 600;
-                font-size: 12pt;
-                color: black !important;
-            }
-            .navigation{
-                flex: 2;
-            }
-            .nav-links{
-                justify-content: space-around;
-                list-style: none;
-            }
-            .links{
-                text-decoration: none;
-                text-transform: uppercase;
-                font-weight: 600;
-                font-size: 12pt;
-                color: black !important;
-            }
 
             .box2 .content {   
                 width:98%;
@@ -136,20 +103,6 @@
                 height:100%;
                 background-color:rgba(0,0,0,0.03);
                 padding:10px;
-
-            }
-
-            .card-img-top {
-                width: 100%;
-                height: 15vw;
-                object-fit: cover;
-            }
-
-            .content hr {
-                margin-top: 0;
-                margin-bottom: 1rem;
-                border: 0;
-                border-top: 1px solid rgba(0, 0, 0, 0.1);
             }
         </style>
     </head>
@@ -176,10 +129,11 @@
                     <span>REPORTS</span>
                 </a>
 
-                <a href="{{ url('/store/createproduct') }}">
+                <a href="{{ url('/addrecord') }}">
                     <i class="fas fa-plus-square"></i>
                     <span>ADD ITEM</span>
                 </a>
+
 
                 <a href="{{ url('/') }}">
                     <i class="fas fa-map-marked"></i>
@@ -199,24 +153,43 @@
             <div class="box2">
                 <header class="card">
                     <div class="card-body ">
-                        <h4>Online Soko - Store Front @ Store Name</h4>
+                        <h4>Online Soko - Add Items @ Store Name</h4>
                     </div>               
                 </header>
 
-                <div class="content border card-columns">
-                    @foreach($items as $item)
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top img-fluid" src="{{ asset('uploads/pictures/' . $item->image)}}" alt="Card image cap">
-                            <hr>
-                            <div class="card-body">
-                                <p class="card-title text-truncate" style="text-transform: uppercase;">Ksh. {{$item->price}} -  {{$item->name}}</p>
-                                <p class="card-text text-truncate">{{$item->description}}</p>
-                                <a href="#" class="btn btn-primary">Edit product</a>
-                            </div>
-                        </div> 
-                    @endforeach          
+                <form action="/store/storefront" method="POST" enctype="multipart/form-data" class="content border">
+
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                        <label for="productName">Product Name</label>
+                        <input name = "productName" type="text" class="form-control" id="productName" placeholder="Enter the product name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productDescription">Product Description</label>
+                        <input name = "productDescription" type="text" class="form-control" id="productDescription" placeholder="Enter the product description">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productQuantity">Product Quantity</label>
+                        <input name = "productQuantity" type="number" class="form-control" id="productQuantity" placeholder="Enter the product quantity">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productPrice">Product Price</label>
+                        <input name = "productPrice" type="number" class="form-control" id="productPrice" placeholder="Enter the product price">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productImage">Upload Product Image</label>
+                        <input name = "productImage" type="file" class="form-control-file" id="productImage">
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Add Product</button>
                 </div> 
-            </div>
+                
+            </form>
+
         </main>           
     </body>
 </html>
