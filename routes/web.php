@@ -48,3 +48,12 @@ Route::get('/item', 'controller@allitems');
 Route::get('/item', 'controller@addform1');
 Route::post('/item_model','controller@add');
 */
+//Mitchell and Adah's routes
+Route::get('/shop', function () {
+    return view('shop');
+});
+Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
+Route::get('/product', function () {
+    return view('product');
+});
+
