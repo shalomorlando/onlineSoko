@@ -9,14 +9,13 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
-    background-attachment: fixed;
 }
 
 .nav-bar{
     width:100%;
     color:#fff;
     padding:20px 10px;
-    background: rgba(31, 72, 126,0.8);
+    background: rgba(31, 72, 126,1);
     position: fixed;
 }
 
@@ -143,8 +142,11 @@
 }
 
 .product-item{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    text-transform: capitalize;
     display: inline-block;
-    width:31%;
+    width:29%;
+    padding:10px;
     margin: 10px;
     text-align: left;
 }
@@ -170,15 +172,45 @@
 
 
 #stock{
+    
+    cursor: pointer;
+    width:100%;
+    margin: 5px 0;
+    text-align: center;
+    border:solid 1px #1F487E;
+    color:#1F487E;
+    padding:5px;
+    font-size: 0.7em;
+    border-radius: 10px;
+}
+#stock-cart{
     box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-    width:20%;
-    margin-left: 10px;
+    width:100%;
+    margin: 5px 0;
     text-align: center;
     background:#1F487E;
     color:#fff;
     padding:5px;
     font-size: 0.7em;
     border-radius: 10px;
+    border:solid 1px #1F487E;
+    transition: all linear .2s;
+}
+
+#stock-cart:hover{
+    cursor: pointer;
+    background: #fff;
+    color:#1F487E;
+    transition: all linear .2s;
+    box-shadow: 0 1px 1px rgba(0,0,0,0);
+}
+
+#left{
+    position: relative;
+    float: right;
+    bottom:10vh;
+    margin-right: 10px;
+    width:30%;
 }
 
 .product-item h3{

@@ -50,17 +50,20 @@
     <div class="product-grid">
         @foreach ($products as $item)
             <div class="product-item">
-                <img src={{$item['image']}}/>
+                <img src="{{ asset('uploads/pictures/' . $item['image'])}}">
                 <p>{{$item['name']}}</p>
+                @if (strlen($item['description'])>31)
+                    <h3>{{substr($item['description'],0,29)}}...</h3>
+                @else
                 <h3>{{$item['description']}}</h3>
+                @endif
+                
                 <h2>KSH.{{$item['price']}}</h2>
-                <h2 id=>{{$item['quantity']}} in Stock</h2>
+                <div id="left">
+                    <h2 id="stock">{{$item['quantity']}} in Stock</h2>
+                    <h2 id="stock-cart">Add to Cart</h2>
+                </div>
             </div>
-            {{-- <div class="product-item wide-item">
-                <img src="https://picsum.photos/300/500"/>
-                <p>Product title goes here</p>
-                <h3>Ksh.500</p>
-            </div> --}}
         @endforeach
     </div>
 </body>
