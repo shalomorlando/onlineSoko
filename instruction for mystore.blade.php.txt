@@ -1,0 +1,9 @@
+1. Add the above in your web.php found in routes folder
+Route::get('/mystore', function () {
+    return view('mystore');
+});
+
+2. add the img folder in this path; onlinesoko>public>img
+
+3. add the css file in the; onlinesoko>public>css>mystore.php
+

@@ -1,0 +1,48 @@
+
+.navigation{
+    background-image: url("/images/background4.jpg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    
+  }
+  .navigation div{
+    display: inline-block;
+    width:50%;
+}
+
+.navigation ul{
+    list-style: none;
+}
+
+.navigation li{
+
+    cursor: pointer;
+    margin: 1vw 0;
+    padding-right: 3em;
+    
+   
+}
+  .card
+{
+  text-align: center;
+  padding-top: 0px;
+  max-height: 550px;
+  padding-right: 0px;
+  max-width: 350px;
+  font-family: arial;
+  object-fit: cover;
+ margin-left: 400px;
+}
+.price {
+    color: #000000;
+    font-size: 22px;
+  }
+  .column
+{ 
+    display: inline-block;
+    padding: 50px;
+    margin-left: 10px;
+    
+}
+
