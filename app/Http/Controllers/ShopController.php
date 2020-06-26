@@ -13,4 +13,8 @@ class ShopController extends Controller
 
         return view();
     }
+    public function show()
+    {
+        
+    }
 }
