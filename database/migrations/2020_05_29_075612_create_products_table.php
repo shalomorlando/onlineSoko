@@ -22,7 +22,6 @@ class CreateProductsTable extends Migration
             $table->integer('quantity');
             $table->boolean('featured')->default(false);
             $table->string('product_image')-> nullable()->after('featured');
-            $table->text('images')-> nullable()->after('product_image');
             $table->foreignId('store_id')->references('id')->on('stores');
             $table->timestamps();
         });
