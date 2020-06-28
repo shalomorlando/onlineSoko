@@ -205,7 +205,7 @@
 
                 <div class="content border card-columns">
                     @foreach($items as $item)
-                        <div class="card" style="width: 16rem;">
+                        <div class="card" style="width: 18rem;">
                             <img class="card-img-top img-fluid" src="{{ asset('uploads/pictures/' . $item->image)}}" alt="Card image cap">
                             <hr>
                             <div class="card-body">
