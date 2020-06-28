@@ -32,9 +32,7 @@
 </div>
 <br><br><br><br><br><br><br><br><br><br><br>
 
-<div class = "shopdetails">
-はマスタードが大好き<br>
-</div>
+
 <br><br>
 <div class = "text">
   Our shop sells a variety of items,from kitchenware to 
@@ -49,6 +47,7 @@
   We also do door step deliveries and work places,all to your preference.
 </div>
 
+<
 <br><br>
 <form method="GET" action="{{ url('my-search') }}" class="form">
       <div class="row">
@@ -61,6 +60,10 @@
       </div>
     </form>
 <br><br><br>
+<div class = "box sidebar">
+    <h4>By Category </h4>
+  
+</div>
 
   <!-- Page content -->
 
@@ -79,84 +82,7 @@
                 <p>Balenciaga Arena High <br> Ksh.4500</p>
             </div>
         </div>
-        <div class="column">
-            <div class="card">
-                <img src="/shopimages/black_cutlery.jpg" alt="Black Cutlery Set" style="width:200px">
-                <p>Black Cutlery Set <br>Ksh. 700</p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <img src="/shopimages/black_mug.png" alt="Black Mug" style="width:200px">
-                <p>Matte Mug <br>Ksh. 700</p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <img src="/shopimages/black_plate.jpg" alt="Black Plate" style="width:200px">
-                <p>Matte Plate<br> Ksh. 1000</p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <img src="/shopimages/coffee_mug.png" alt="Coffee Mug" style="width:200px">
-                <p>Coffee Mug <br> Ksh. 1500</p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <img src="/shopimages/gold_cutlery.jpg" alt="Gold Cutlery" style="width:200px">
-                <p>Gold Cutlery Set <br>Ksh.1000</p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <img src="/shopimages/marble_plate.jpg" alt="Marble  Plate" style="width:200px">
-                <p>Marble Plate <br>Ksh.2000</p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <img src="/shopimages/salad_bowls.jpg" alt="Salad Bowls" style="width:200px">
-                <p>Salad Bowls <br>Ksh. 3000</p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <img src="/shopimages/walnut_bowls.jpg" alt="Walnut Bowls" style="width:200px">
-                <p>Walnut Bowls <br>Ksh1700</p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <img src="/shopimages/wood_board.jpg" alt="Wood Board" style="width:200px">
-                <p>Wood Board <br>Ksh.1300</p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <img src="/shopimages/wood_olivebowls.jpg" alt="Olive Bowls" style="width:200px">
-                <p>Olive Bowls <br> Ksh. 2500</p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <img src="/shopimages/balenciaga_chunky.jpg" alt="Balenciaga Chunky" style="width:200px">
-                <p>Balenciaga Chunky <br> Ksh. 5500</p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <img src="/shopimages/chelsea_boots.jpg" alt="Chelsea Boots" style="width:200px">
-                <p>Chelsea Boots <br> Ksh. 2500</p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <img src="/shopimages/Nike_airmax.jpg" alt="Nike Airmax" style="width:200px">
-                <p>Nike Airmax <br> Ksh. 4500</p>
-            </div>
-        </div>
+        
         <div class="column">
             <div class="card">
                 <img src="/shopimages/leather_chelsea_boots.jpg" alt="Olive Bowls" style="width:200px">
