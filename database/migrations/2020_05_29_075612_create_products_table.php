@@ -15,11 +15,13 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id('id');
-            $table->string('title');
-            $table->string('description');
+            $table->string('slug')->unique();
+            $table->string('title')->unique();
+            $table->text('description')->nullable();
             $table->integer('price');
             $table->integer('quantity');
-            $table->string('product_image');            
+            $table->boolean('featured')->default(false);
+            $table->string('product_image')-> nullable()->after('featured');
             $table->foreignId('store_id')->references('id')->on('stores');
             $table->timestamps();
         });
@@ -28,6 +30,7 @@ class CreateProductsTable extends Migration
     /**
      * Reverse the migrations.
      *
+     * 
      * @return void
      */
     public function down()
