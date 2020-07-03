@@ -16,6 +16,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
+        <!--Chart JS CDN-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             html, body {
@@ -291,15 +294,53 @@
 
         <!--get data for chart-->
         <script>
-            getData();
+            yValues = []
+            drawChart();
+            async function drawChart(){
+                await getData();
+                var ctx = document.getElementById('weekChart').getContext('2d');
 
+                var myChart = new Chart(ctx, {
+                     type: 'bar',
+                     data: {
+                         labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+
+                         datasets: [{
+                             label: "This Week's Sales Trend ",
+                             data : yValues,
+                             backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ], 
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                     }                       
+
+            });
+        }
+
+            
             async function getData(){
                 let data;
                 $(document).ready(function(){
                     $.get('http://127.0.0.1:8000/api/orders', function(result, status){
                         data = result;
                         let totalSales = 0;
-                        console.warn(data);
+                        //console.warn(data);
                         for (i = 0; i < data.length; i++){
                             totalSales = totalSales + data[i].total;
                         }
@@ -307,8 +348,38 @@
                         $(".annualEarnings").append("Ksh " + totalSales);
                         $(".monthlyEarnings").append("Ksh " + totalSales);
                         $(".totalOrders").append(data.length);
+
+                        splitData = splitArray(data, 7);
+                        let orderTotals = [];
+                        for (i = 0; i < splitData.length; i++){
+                            let orderSum = 0;
+                            for(j = 0; j < splitData[i].length; j++){
+                                order = splitData[i][j];
+                                orderSum += order.total;
+                            }
+
+                            orderTotals.push(orderSum);
+                            yValues.push(orderSum)
+                        }
+                        console.warn(splitData[0]);
+                        console.warn(orderTotals);
+                        console.warn(yValues);
                     })
                 })
+            }
+
+            function splitArray(myArray, split_size){
+
+                let arrayLength = myArray.length;
+                let tempArray = [];
+
+                for (let index = 0; index < arrayLength; index += split_size){
+
+                    myChunk = myArray.slice(index, index + split_size);
+                    tempArray.push(myChunk);
+                }
+
+                return tempArray;
 
             }
         </script>
