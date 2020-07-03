@@ -185,7 +185,7 @@
                     <span>STORE FRONT</span>
                 </a>
 
-                <a href="#">
+                <a href="{{ url('/store/reports') }}">
                     <i class="fas fa-chart-bar"></i>
                     <span>REPORTS</span>
                 </a>
@@ -198,11 +198,6 @@
                 <a href="{{ url('/') }}">
                     <i class="fas fa-map-marked"></i>
                     <span>MARKET PLACE</span>
-                </a>
-
-                <a href="#">
-                    <i class="fas fa-cog"></i>
-                    <span>ACCOUNT-SETTINGS</span>
                 </a>
 
 
