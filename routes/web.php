@@ -52,10 +52,12 @@ Route::post('/item_model','controller@add');
 */
 //Mitchell and Adah's routes
 Route::get('/shop', function () {
-    return view('shop');
+    $products = Item::all();
+    return view('shop')->with('products', $products);
 });
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 Route::get('/product', function () {
-    return view('product');
+    $products = Item::all();
+    return view('product')-> with ('products',$products);
 });
 
