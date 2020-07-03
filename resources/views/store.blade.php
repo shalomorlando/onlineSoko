@@ -198,7 +198,7 @@
                     </div>               
                 </header>
 
-                <div class="content border card-columns">
+                <div class="content border card-columns row">
                     @foreach($items as $item)
                         <div class="card" style="width: 18rem;">
                             <img class="card-img-top img-fluid" src="{{ asset('uploads/pictures/' . $item->image)}}" alt="Card image cap">
@@ -206,8 +206,8 @@
                             <div class="card-body">
                                 <p class="card-title text-truncate" style="text-transform: uppercase;">Ksh. {{$item->price}} -  {{$item->name}}</p>
                                 <p class="card-text text-truncate">{{$item->description}}</p>
-                                <center><a href="/editimage/{{$item->id}}" style="width:90%;" class="btn btn-primary"> Edit Product </a></center><br>
-                                <center><a href="/deleteimage/{{$item->id}}" style="width:90%;" class="btn btn-danger" >Delete Product</a></center>
+                                <a href="/editimage/{{$item->id}}" style="width:100%; display:block;" class="btn btn-primary"> Edit Product </a> <br>
+                                <a href="/deleteimage/{{$item->id}}" style="width:100%; display:block;" class="btn btn-danger" >Delete Product</a>
                             </div>
                         </div> 
                     @endforeach          

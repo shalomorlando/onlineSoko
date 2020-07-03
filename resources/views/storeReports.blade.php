@@ -165,6 +165,12 @@
             .content .border-left-info{
                 border-left: .25rem solid #36b9cc !important;
             }
+
+            .content .charts{
+                width:100%; 
+                height:70%; 
+                background-color: #EEEEEE;
+            }
         </style>
     </head>
 
@@ -262,7 +268,7 @@
                             </div>
                         </div>  
                     </div>
-                    <div class="charts" style="width:100%; height:70%; background-color:red;">
+                    <div class="charts">
                     
                     
                     </div>
