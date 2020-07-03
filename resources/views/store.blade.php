@@ -160,8 +160,8 @@
             <div class="sidebar">
                 <center>
                     <img src="/img/pant1.jpg" alt="" class="profile_image">
-                    <h4>Store Name</h4>
-                    <h4>Store Bio Description</h4>
+                    <h4>aren_shoeske</h4>
+                    <h4>Aren's online shop</h4>
                 </center>
 
                 <hr>
@@ -194,7 +194,7 @@
             <div class="box2">
                 <header class="card">
                     <div class="card-body ">
-                        <h4>Online Soko - Store Front @ Store Name</h4>
+                        <h4>Online Soko - Store Front @ aren_shoeske</h4>
                     </div>               
                 </header>
 

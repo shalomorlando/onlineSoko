@@ -17,6 +17,7 @@
     padding:20px 10px;
     background: rgba(31, 72, 126,1);
     position: fixed;
+    display:flex;
 }
 
 

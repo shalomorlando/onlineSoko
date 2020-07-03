@@ -15,11 +15,7 @@
                 <h1>Online Soko</h1>
             </div>
             <div>
-                <ul>
-                    <li>Lifestyle</li>
-                    <li>Home</li>
-                    <li>Wearables</li>
-                </ul>
+
             </div>
             <div>
                 <i class="fas fa-search"></i>
