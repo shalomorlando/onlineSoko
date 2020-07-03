@@ -15,6 +15,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             html, body {
@@ -170,6 +171,12 @@
                 width:100%; 
                 height:70%; 
                 background-color: #EEEEEE;
+                padding: 10px;
+            }
+
+            .weekChart{
+                height: 100%;
+                width: 100%;
             }
         </style>
     </head>
@@ -226,7 +233,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Totals)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Ksh 100,000</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800 annualEarnings"></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -242,7 +249,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Ksh 40,000</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800 monthlyEarnings"></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -258,7 +265,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Orders (Totals)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">400</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800 totalOrders"></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -270,12 +277,41 @@
                     </div>
                     <div class="charts">
                     
-                    
+                        <canvas id="weekChart"></canvas>
                     </div>
 
                 </div>
 
             </div>
-        </main>           
+        </main> 
+
+        <!--jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!--get data for chart-->
+        <script>
+            getData();
+
+            async function getData(){
+                let data;
+                $(document).ready(function(){
+                    $.get('http://127.0.0.1:8000/api/orders', function(result, status){
+                        data = result;
+                        let totalSales = 0;
+                        console.warn(data);
+                        for (i = 0; i < data.length; i++){
+                            totalSales = totalSales + data[i].total;
+                        }
+
+                        $(".annualEarnings").append("Ksh " + totalSales);
+                        $(".monthlyEarnings").append("Ksh " + totalSales);
+                        $(".totalOrders").append(data.length);
+                    })
+                })
+
+            }
+        </script>
+                  
     </body>
 </html>
