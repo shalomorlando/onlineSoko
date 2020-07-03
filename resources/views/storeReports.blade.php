@@ -17,7 +17,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
         <!--Chart JS CDN-->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
@@ -291,15 +291,17 @@
         <!--jquery-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 
         <!--get data for chart-->
         <script>
-            yValues = []
-            drawChart();
-            async function drawChart(){
-                await getData();
-                var ctx = document.getElementById('weekChart').getContext('2d');
 
+            drawChart();
+
+            async function drawChart(){
+                yValues = await getData();
+                var ctx = document.getElementById('weekChart').getContext('2d');
+                console.warn(yValues);
                 var myChart = new Chart(ctx, {
                      type: 'bar',
                      data: {
@@ -335,40 +337,49 @@
 
             
             async function getData(){
-                let data;
-                $(document).ready(function(){
-                    $.get('http://127.0.0.1:8000/api/orders', function(result, status){
-                        data = result;
-                        let totalSales = 0;
-                        //console.warn(data);
-                        for (i = 0; i < data.length; i++){
-                            totalSales = totalSales + data[i].total;
-                        }
+                const result = await $.ajax({
+                    url: 'http://127.0.0.1:8000/api/orders',
+                    type: 'GET',
+                    success: function (data) {                        
+                        
+                    },
+                    error: function(){
+                        console.log('error')
+                    }
+                });
 
-                        $(".annualEarnings").append("Ksh " + totalSales);
-                        $(".monthlyEarnings").append("Ksh " + totalSales);
-                        $(".totalOrders").append(data.length);
+                totalSales = 0;
 
-                        splitData = splitArray(data, 7);
-                        let orderTotals = [];
-                        for (i = 0; i < splitData.length; i++){
-                            let orderSum = 0;
-                            for(j = 0; j < splitData[i].length; j++){
-                                order = splitData[i][j];
-                                orderSum += order.total;
-                            }
+                for (i = 0; i < result.length; i++){
+                    totalSales = totalSales + result[i].total;
+                }
 
-                            orderTotals.push(orderSum);
-                            yValues.push(orderSum)
-                        }
-                        console.warn(splitData[0]);
-                        console.warn(orderTotals);
-                        console.warn(yValues);
-                    })
-                })
+                $(".annualEarnings").append("Ksh " + totalSales);
+                $(".monthlyEarnings").append("Ksh " + totalSales);
+                $(".totalOrders").append(result.length); 
+                
+                data = await splitArray(result, 7);
+                yTotalOrderValues = await sumUpItems(data);
+                //console.warn(yTotalOrderValues[0]);
+                return yTotalOrderValues;
             }
 
-            function splitArray(myArray, split_size){
+            async function sumUpItems(arr){
+                total = [];
+                for (i = 0; i < arr.length; i++){
+                    let orderSum = 0;
+                    for(j = 0; j < arr[i].length; j++){
+                        order = arr[i][j];
+                        orderSum += order.total;
+                    }
+
+                    total.push(orderSum);
+                }
+                return total;
+            }
+                
+
+            async function splitArray(myArray, split_size){
 
                 let arrayLength = myArray.length;
                 let tempArray = [];
