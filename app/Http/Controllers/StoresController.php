@@ -45,4 +45,8 @@ class StoresController extends Controller
         return view ('store', ['items'=>$items]);
     }
 
+    public function display(){
+        return view('storeReports');
+    }
+
 }

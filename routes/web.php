@@ -24,7 +24,9 @@ Route::get('/', function () {
 //New experimental routes by Shalom and Nirel 
 Route::get('/store/storefront', 'StoresController@index');
 Route::get('/store/createproduct', 'StoresController@create');
+Route::get('/store/reports', 'StoresController@display');
 Route::post('/store/storefront', 'StoresController@store'); 
+Route::view('message', 'message');
 
 
 //Esther's and Alvin's routes
