@@ -38,8 +38,8 @@
         <h2>KSH.{{$item['price']}}</h2>
         <a id="left">
             <h2 id="stock">{{$item['quantity']}} in Stock</h2>
-            <a href="{{route('product.addToCart',['id'=>$item->id])}}"></a>
-            <h2 id="stock-cart">Add to Cart</h2>
+            <a href="{{ route('product.addToCart',['id'=>$item['id']]) }}">
+                <h2 id="stock-cart">Add to Cart</h2></a>
         </a>
     </div>
 </div>
