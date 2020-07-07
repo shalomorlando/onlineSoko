@@ -21,11 +21,21 @@ Route::get('/', function () {
     return view('index')->with('products', $products);
 });
 
-//New experimental routes by Shalom and Nirel 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/add-to-cart/{id}',[
+    'uses'=>'HomeController@getAddToCart', 'as'=> 'product.addToCart']);
+
+
+
+
+//New experimental routes by Shalom and Nirel
 Route::get('/store/storefront', 'StoresController@index');
 Route::get('/store/createproduct', 'StoresController@create');
 Route::get('/store/reports', 'StoresController@display');
-Route::post('/store/storefront', 'StoresController@store'); 
+Route::post('/store/storefront', 'StoresController@store');
 Route::view('message', 'message');
 
 
@@ -61,3 +71,10 @@ Route::get('/product', function () {
     return view('product')-> with ('products',$products);
 });
 
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

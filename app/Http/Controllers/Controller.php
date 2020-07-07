@@ -25,20 +25,20 @@ class Controller extends BaseController
         $item->description=$request->input('description');
         $item->quantity=$request->input('quantity');
         $item->price=$request->input('price');
-               /*storing image*/
-       if($request->hasfile('image'))
-       {
-           $file=$request->file('image');
-           $extension=$file->getClientOriginalExtension();//image extension
-           $filename=time().'.'.$extension;
-           $file->move('uploads/pictures/', $filename);
-           $item->image=$filename;
-       }
-       else
-       {
-           return $request;
-           $item->image='';
-       }
+        /*storing image*/
+        if($request->hasfile('image'))
+        {
+            $file=$request->file('image');
+            $extension=$file->getClientOriginalExtension();//image extension
+            $filename=time().'.'.$extension;
+            $file->move('uploads/pictures/', $filename);
+            $item->image=$filename;
+        }
+        else
+        {
+            return $request;
+            $item->image='';
+        }
         $item->save();
         return view('/store/storefront')->with('item', $item );
     }
@@ -59,18 +59,18 @@ class Controller extends BaseController
         $items->description=$request->input('description');
         $items->quantity=$request->input('quantity');
         $items->price=$request->input('price');
-               /*storing image*/
-       if($request->hasfile('image'))
-       {
-           $file=$request->file('image');
-           $extension=$file->getClientOriginalExtension();//image extension
-           $filename=time().'.'.$extension;
-           $file->move('uploads/pictures/', $filename);
-           $items->image=$filename;
-       }
+        /*storing image*/
+        if($request->hasfile('image'))
+        {
+            $file=$request->file('image');
+            $extension=$file->getClientOriginalExtension();//image extension
+            $filename=time().'.'.$extension;
+            $file->move('uploads/pictures/', $filename);
+            $items->image=$filename;
+        }
         $items->save();
         echo "Saved Successfully";
-        
+
         return redirect('/store/storefront')->with('items', $items );
     }
     public function delete($id)

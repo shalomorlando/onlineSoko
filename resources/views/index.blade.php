@@ -9,42 +9,48 @@
     <title>Online Soko</title>
 </head>
 <body>
-    <div class="cover">
-        <nav class="nav-bar">
-            <div>
-                <h1>Online Soko</h1>
-            </div>
-            <div>
-
-            </div>
-            <div>
-                <i class="fas fa-search"></i>
-                <i class="fas fa-user-alt"></i>
-                <i class="fas fa-shopping-bag"></i>
-            </div>
-        </nav>
-        <div class="jumbo">
+<div class="cover">
+    <nav class="nav-bar">
+        <div>
             <h1>Online Soko</h1>
-            <p>Premium Non-Essentials</p>
         </div>
+        <div>
+            <ul>
+                <li>Lifestyle</li>
+                <li>Home</li>
+                <li>Wearables</li>
+            </ul>
+        </div>
+        <div>
+            <i class="fas fa-search"></i>
+            <a href="/home"><i class="fas fa-user-alt"></i></a>
+            <i class="fas fa-shopping-bag"></i>
+        </div>
+    </nav>
+    <div class="jumbo">
+        <h1>Online Soko</h1>
+        <p>Premium Non-Essentials</p>
     </div>
-    <ul class="landing-nav">
-        <li class="active-item">
-            featured
-        </li>
-        <li>
-            history
-        </li>
-        <li>
-            cart
-        </li>
-        <li>
-            payment
-        </li>
+</div>
+<ul class="landing-nav">
+    <li class="active-item">
+        featured
+    </li>
+    <li>
+        history
+    </li>
+    <li>
+            Cart
+    </li>
+    <li>
+        payment
+    </li>
 
     </ul>
+
+
     <div class="product-grid">
-        @foreach ($products as $item)
+        @foreach ($products ?? '' as $item)
             <div class="product-item">
                 <img src="{{ asset('uploads/pictures/' . $item['image'])}}">
                 <p>{{$item['name']}}</p>
@@ -53,11 +59,13 @@
                 @else
                 <h3>{{$item['description']}}</h3>
                 @endif
-                
+                <h2>{{$item['id']}}</h2>
                 <h2>KSH.{{$item['price']}}</h2>
-                <div id="left">
+                <a id="left">
                     <h2 id="stock">{{$item['quantity']}} in Stock</h2>
+                    <a href="{{route('product.addToCart',['id'=>$item->id])}}"></a>
                     <h2 id="stock-cart">Add to Cart</h2>
+                </a>
                 </div>
             </div>
         @endforeach
