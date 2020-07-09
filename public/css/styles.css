@@ -17,6 +17,7 @@
     padding:20px 10px;
     background: rgba(31, 72, 126,1);
     position: fixed;
+    display:flex;
 }
 
 
@@ -79,7 +80,8 @@
 }
 
 .nav-bar i{
-    
+
+
 }
 
 .jumbo{
@@ -172,7 +174,7 @@
 
 
 #stock{
-    
+
     cursor: pointer;
     width:100%;
     margin: 5px 0;
