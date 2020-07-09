@@ -27,6 +27,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/add-to-cart/{id}',[
     'uses'=>'HomeController@getAddToCart', 'as'=> 'product.addToCart']);
+Route::get('/shopping-cart',[
+    'uses'=>'HomeController@getCart', 'as'=> 'product.shoppingCart']);
 
 
 

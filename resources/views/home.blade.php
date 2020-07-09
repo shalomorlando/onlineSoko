@@ -18,7 +18,7 @@
                         <li>Wearables</li>
                         <i class="fas fa-search"></i>
                         <a href="/home"><i class="fas fa-user-alt"></i></a>
-                        <i class="fas fa-shopping-bag"></i>
+
                     </ul>
                 </div>
             </nav>
