@@ -4588,6 +4588,7 @@ input[type=button].btn-block {
 }
 
 .navbar-text {
+    color: white;
   display: inline-block;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -11057,4 +11058,60 @@ a.text-dark:focus {
 
 .wide-item{
     width: 64%;
+}
+.jumbo{
+    color:#fff;
+    padding:50px;
+    height: 50vh;
+    text-align: center;
+}
+
+.jumbo h1{
+    margin-top: 25vh;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    font-size: 5em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+.cover{
+    background-image: url("/images/cover-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.landing-nav{
+    list-style: none;
+    padding:20px;
+    text-align: center;
+}
+
+.landing-nav li{
+    text-align: center;
+    font-size: 0.8em;
+    display: inline-block;
+    margin:0 2.5vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    transition: all linear .2s;
+}
+
+.active-item{
+    border-bottom: solid #E9B44C 3px;
+}
+
+.landing-nav li:hover{
+    transform: scale(0.97);
+    transition: all linear .1s;
+    color: #E9B44C;
+}
+
+
+.landing-nav li:active{
+    transform: scale(0.93);
+    transition: all linear .1s;
 }

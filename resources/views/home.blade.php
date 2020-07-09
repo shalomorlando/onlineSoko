@@ -1,30 +1,37 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="img" style="min-width: 100%; margin-top: -24px">
     <div class="cover">
         <div class="jumbo">
             <h1>Online Soko</h1>
-            <p>Premium Non-Essentials</p>
         </div>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <nav class="nav-bar">
-                <div>
-                    <ul>
-                        <li>Lifestyle</li>
-                        <li>Home</li>
-                        <li>Wearables</li>
-                        <i class="fas fa-search"></i>
-                        <a href="/home"><i class="fas fa-user-alt"></i></a>
+</div>
+<ul class="landing-nav">
+    <a href="{{route ('home') }}" style="color: #1b1e21">
+        <li class="active-item">
+            featured
+        </li>
+    </a>
+    <a href="#" style="color: #1b1e21">
+        <li>
+            history
+        </li>
+    </a>
+    <a href="{{route ('product.shoppingCart') }}"style="color: #1b1e21" >
+        <li >
+            Cart
+        </li>
+    </a>
+    <a href="#" style="color: #1b1e21" >
+        <li>
+            payment
+        </li>
+    </a>
+</ul>
 
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </div>
-<div class="product-grid">
+<div class="product-grid container">
     @foreach ($products ?? '' as $item)
     <div class="product-item">
         <img src="{{ asset('uploads/pictures/' . $item['image'])}}">
@@ -42,9 +49,8 @@
                 <h2 id="stock-cart">Add to Cart</h2></a>
         </a>
     </div>
-</div>
 @endforeach
 </div>
-</div>
+
 
 @endsection
