@@ -2,45 +2,30 @@
 <head>
     <link rel="stylesheet" href="{{ URL::asset('css/product.css')}}" /> 
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 </head>
 <body>
-    <nav class="nav-bar">
-            <div>
-                <h1>Online Soko</h1>
-            </div>
-            <div>
-                <ul>
-                    
-                </ul>
-            </div>
-            <div>
-              <a href = "/">  <i class="fas fa-home"></i></a>
-             <a href = "#" >  <i class="fas fa-user-alt"></i></a>
-              <a href = "#">  <i class="fas fa-shopping-bag"></i></a>
-            </div>
-        </nav>
-
-    <br><br><br><br><br><br>
-
-    <div class = "shop-name">
-        <h2>The Shop Name</h2>
+    <div class = "navigation">
+        <ul>
+            <img src = "/shopimages/logo.jpg" alt ="logo"  width= "80px"style= "float:left";>
+            <li style="float:right">SHOP</li>
+            <li style="float:right">BLOG</li>
+            <li style="float:right"> CART</li>
+        </ul>
     </div>
 
-    <br><br>
+    <br><br><br><br><br>
 
     <div class = "product-card">
         <div class = "product-image">
-        <img src = "/shopimages/marble_plate.jpg" style = "width:320px; height:250px" >
+            <img src = "/shopimages/marble_plate.jpg" style = "width:370px; height:400px" >
         </div>
         <div class = "product_details">
-            <br><br>
+            <br><br><br><br>
             <h2><u>Marble Plate Set</u></h2><br>
             <h3>Two marble dinner plates<br> 
             Available in black and white</h3><br>
-            <br>
             <h4>$19.99</h4><br><br>
         </div>
     </div>
@@ -48,17 +33,27 @@
 
     <div class = "other-products">
         <h2>You may also like...</h3>
-        <br>
         <div class="column-grid">
-            @foreach($products as $product)
             
             <div class="other-product-card">
-            <a href = ""><img src = "{{ asset('uploads/pictures/' . $product['image'])}}"></a>
-            <a href = "#">{{$product['name']}}</a>
-            <a href = "#">{{$product['price']}}</a>
-
+                <img src="/shopimages/background1.jpg" alt="Balenciaga " style="width:200px">
+                <p>Balenciaga Arena High <br> Ksh.4500</p>
             </div>
-            @endforeach
+
+            <div class="other-product-card">
+                <img src="/shopimages/balenciaga2.jpg" alt="Black Cutlery Set" style="width:200px">
+                <p>Black Cutlery Set <br>Ksh. 700</p>
+            </div>
+
+            <div class="other-product-card">
+                <img src="/shopimages/fila.jpg" alt="Fila1" style="width:200px">
+                <p>Yellow Fila<br>Ksh. 700</p>
+            </div>
+
+            <div class="other-product-card">
+                <img src="/shopimages/fila1.jpg" alt="ila2" style="width:200px">
+                <p>White Fila<br> Ksh. 1000</p>
+            </div>
 
         </div>
  

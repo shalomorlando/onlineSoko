@@ -63,15 +63,17 @@ Route::get('/item', 'controller@addform1');
 Route::post('/item_model','controller@add');
 */
 //Mitchell and Adah's routes
-Route::get('/shop', function () {
+Route::get('/shop', function(){
     $products = Item::all();
     return view('shop')->with('products', $products);
+   
 });
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
-Route::get('/product', function () {
-    $products = Item::all();
-    return view('product')-> with ('products',$products);
-});
+
+
+//Kinda and Kiai's routes
+Route::view('newsletter','newsletter');
+Route::post('submit','NewsletterController@save');
 
 
 
