@@ -71,6 +71,10 @@ Route::get('/product', function () {
     return view('product')-> with ('products',$products);
 });
 
+//Kinda and Kiai's routes
+Route::view('newsletter','newsletter');
+Route::post('submit','NewsletterController@save');
+
 
 
 
