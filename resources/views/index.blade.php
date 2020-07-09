@@ -37,7 +37,7 @@
             featured
         </li>
         <li>
-            history
+           history
         </li>
         <li>
             cart

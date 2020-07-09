@@ -26,17 +26,21 @@ class ShopController extends Controller
 
     }
    
-        public function show($name)
+     /**
+     * Display the specified resource.
+     *
+     * @param  string  $id
+     * @param  string  $id1
+     * @return \Illuminate\Http\Response
+     */
+        public function show($id)
     {
-        $products = Item::where('name', $name)->firstOrFail();
-        $mightAlsoLike = Item::where('name', '!=', $name)->mightAlsoLike()->get();
-        $stockLevel = getStockLevel($products->quantity);
+        $product = Item::where('id', $id)->get();
+        $mightAlsoLike = Item::where('id', '!=', $id)->get();
 
-        return view('shop')->with([
-            'product' => $product,
-            'stockLevel' => $stockLevel,
-            'mightAlsoLike' => $mightAlsoLike,
-        ]);
+        return view('product')->with(['product'=> $product, 'mightAlsoLike' => $mightAlsoLike]);
     }
+    
+   
     
 }

@@ -40,7 +40,7 @@ class Controller extends BaseController
            $item->image='';
        }
         $item->save();
-        return view('additems')->with('item', $item );
+        return view('/store/storefront')->with('item', $item );
     }
     public function display()
     {
@@ -71,12 +71,12 @@ class Controller extends BaseController
         $items->save();
         echo "Saved Successfully";
         
-        return redirect('/viewpage')->with('items', $items );
+        return redirect('/store/storefront')->with('items', $items );
     }
     public function delete($id)
     {
         $items=Item::find($id);
         $items->delete();
-        return redirect('/viewpage')->with('items', $items );
+        return redirect('/store/storefront')->with('items', $items );
     }
 }

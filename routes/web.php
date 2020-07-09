@@ -24,7 +24,9 @@ Route::get('/', function () {
 //New experimental routes by Shalom and Nirel 
 Route::get('/store/storefront', 'StoresController@index');
 Route::get('/store/createproduct', 'StoresController@create');
+Route::get('/store/reports', 'StoresController@display');
 Route::post('/store/storefront', 'StoresController@store'); 
+Route::view('message', 'message');
 
 
 //Esther's and Alvin's routes
@@ -52,13 +54,8 @@ Route::post('/item_model','controller@add');
 Route::get('/shop', function(){
     $products = Item::all();
     return view('shop')->with('products', $products);
-
-});
    
-
-
-Route::get('/product', 'ShopController@show')->name('shop.show');
-Route::get('/product', function () {
-    return view('product');
 });
+Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
+
 

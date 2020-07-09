@@ -19,10 +19,24 @@ use Illuminate\Support\Str;
 
 $factory->define(User::class, function (Faker $faker) {
     return [
-        'name' => $faker->name,
+        'username' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         'remember_token' => Str::random(10),
+        'phone_number' => $faker->tollFreePhoneNumber,
+        'avatar' => 'avatar.jpg',
+    ];
+});
+
+$factory->define(App\Order::class, function (Faker $faker) {
+    return [
+
+        'address' => 'Nairobi',
+        'total' => $faker->numberBetween($min = 1000, $max = 5000),
+        'status' => 1,        
+        'is_delivery' => $faker->numberBetween($min = 0, $max = 0),
+        'user_id' => $faker->numberBetween($min = 1, $max = 3),
+        'store_id' =>  $faker->numberBetween($min = 1, $max = 2)
     ];
 });

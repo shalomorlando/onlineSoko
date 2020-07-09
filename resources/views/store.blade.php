@@ -171,7 +171,7 @@
                     <span>STORE FRONT</span>
                 </a>
 
-                <a href="#">
+                <a href="{{ url('/store/reports') }}">
                     <i class="fas fa-chart-bar"></i>
                     <span>REPORTS</span>
                 </a>
@@ -186,11 +186,6 @@
                     <span>MARKET PLACE</span>
                 </a>
 
-                <a href="#">
-                    <i class="fas fa-cog"></i>
-                    <span>ACCOUNT-SETTINGS</span>
-                </a>
-
 
             </div>
             <!--End Side bar-->
@@ -203,7 +198,7 @@
                     </div>               
                 </header>
 
-                <div class="content border card-columns">
+                <div class="content border card-columns row">
                     @foreach($items as $item)
                         <div class="card" style="width: 18rem;">
                             <img class="card-img-top img-fluid" src="{{ asset('uploads/pictures/' . $item->image)}}" alt="Card image cap">
@@ -211,7 +206,8 @@
                             <div class="card-body">
                                 <p class="card-title text-truncate" style="text-transform: uppercase;">Ksh. {{$item->price}} -  {{$item->name}}</p>
                                 <p class="card-text text-truncate">{{$item->description}}</p>
-                                <a href="#" class="btn btn-primary">Edit product</a>
+                                <a href="/editimage/{{$item->id}}" style="width:100%; display:block;" class="btn btn-primary"> Edit Product </a> <br>
+                                <a href="/deleteimage/{{$item->id}}" style="width:100%; display:block;" class="btn btn-danger" >Delete Product</a>
                             </div>
                         </div> 
                     @endforeach          
