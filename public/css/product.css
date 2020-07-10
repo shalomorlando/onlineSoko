@@ -11,13 +11,12 @@
   background: rgba(31, 72, 126,1);
   position: fixed;
 }
-
-
 .nav-bar div{
   display: inline-block;
   text-align: center;
   width:31%;
 }
+
 .nav-bar div:nth-child(1){
   width: 200px;
 }
@@ -170,6 +169,14 @@
   background-color: orangered;
   color: white;
 }
+#title{
+  margin-left: 450px;
+  margin-right: 50px;
+  margin-top:-60px;
+  font-size: 2em;
+  color: black;
+  letter-spacing: 1.5px;
+}
 #stock{
     
   cursor: pointer;
@@ -190,7 +197,7 @@
   margin-right: 300px;
   box-shadow: 0 1px 1px rgba(0,0,0,0.3);
   width:400px;
-  margin-top: 60px;
+  margin-top: 40px;
   text-align: center;
   cursor:pointer;
   background:#1F487E;
@@ -226,4 +233,15 @@
   font-size : 16px;
   letter-spacing: 1.5;
   text-transform: initial;
+}
+#description{
+  text-align:center;
+  margin-left: 400px;
+  font-weight:none;
+}
+#shillings
+{
+  font-size: 2.0em;
+  color: black;
+  letter-spacing: 1.5px;
 }
