@@ -21,10 +21,8 @@
 <body>
  <div class= "navigation">
     <ul>
-          <h4 style= "float:left; color:white;"> Aren Shoes </h4> 
-          <a style="padding-right:1em;" ><li style="float:right"><i class="fas fa-search"></i></li></a>
-          <a style="padding-right:1em;" ><li style="float:right"><i class="fas fa-user-alt"></i></li></a>
-          <a style="padding-right:1em;" ><li style="float:right"> <i class="fas fa-shopping-bag"></i></li></a>
+          <h4 style= "float:left; color:white;"> Online Soko </h4> 
+
      </ul>
             <p class = "owner">Aren_Shoeske</p><br>
             <p class = "ownerdetails">

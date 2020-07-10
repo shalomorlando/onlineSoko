@@ -32,6 +32,9 @@
             
             <h2 id="stock">{{$item['quantity']}} in Stock</h2>
           <a href="{{route('product.addToCart',['id'=>$item['id']])}}">  <h2 id="stock-cart"> Add to Cart</h2></a>
+         <a href="{{ url('/shop') }}">  <h2 id="stock-cart"> Go to shop</h2></a>
+
+
         </div>
         @endforeach
     </div>
