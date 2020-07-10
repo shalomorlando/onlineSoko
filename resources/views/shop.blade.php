@@ -28,8 +28,8 @@
      </ul>
             <p class = "owner">Aren_Shoeske</p><br>
             <p class = "ownerdetails">
-              Aren Shoeske is a Kenyan owned brand <br>
-              that specializes in quality designer sneakers at affordable prices.<br>
+              Aren Shoeske is a Kenyan owned brand that <br>
+              specializes in quality designer sneakers at affordable prices.<br>
               
             </p>
               <div class = "img-container">
@@ -53,11 +53,6 @@
           Deposit is required before delivery which is done freely within the CBD and at a fee depending on where
           you are. Exchanging of items is permitted only when shoes are returned in the same condition.
 </div>
-
-<br><br>
-
-<br><br><br>
-
   <!-- Page content -->
 </div>
 </div>
