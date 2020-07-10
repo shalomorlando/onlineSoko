@@ -57,7 +57,8 @@
 <hr>
 <div class = "row container">
     <a class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 container">
-        <a href="{{ route ('checkout')}}" type="button" class="btn btn-success">Checkout</a>
+        <a href="{{ route ('checkout')}}" type="button" class="btn btn-success mr-2">Checkout - Stripe</a>
+        <a href="{{ route ('checkout-mpesa')}}" type="button" class="btn btn-success">Checkout- Mpesa </a>
     </div>
 </div>
     @else

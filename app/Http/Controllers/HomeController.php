@@ -53,6 +53,16 @@ class HomeController extends Controller
         $total = $cart->totalPrice;
         return view('checkout', ['total' => $total]);
   }
+  public function  getCheckoutmpesa()
+    {
+        if(!Session::has('cart')) {
+            return view('shopping-cart');
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        $total = $cart->totalPrice;
+        return view('checkout-mpesa', ['total' => $total]);
+  }
   public function postCheckout(Request $request){
       if(!Session::has('cart')) {
           return redirect()->route('shoppingCart');

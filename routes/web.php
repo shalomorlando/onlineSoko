@@ -32,6 +32,9 @@ Route::get('/shopping-cart',[
 
 Route::get('/checkout', [ 'uses' => 'HomeController@getCheckout',
     'as'=> 'checkout']);
+
+Route::get('/checkout-mpesa', [ 'uses' => 'HomeController@getCheckoutmpesa',
+    'as'=> 'checkout-mpesa']);   
 Route::post('/checkout',[
     'uses' => 'HomeController@postCheckout',
     'as' => 'checkout']);
