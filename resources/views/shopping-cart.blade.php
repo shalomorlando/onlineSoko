@@ -37,10 +37,11 @@
                     <strong style="flex: 1;">{{ $product['item']['name'] }}</strong>
                     <div class="btn-group" style="flex: 1;">
                         <button type="button" class="btn btn-primary btn-xs dropdown-toogle " data-toggle="dropdown">
-                            Action <span class="caret"></span></button>
+                            Action <span class="caret"></span>
+                        </button>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Reduce by 1</a></li>
-                            <li><a href="#">Reduce All</a></li>
+                            <li><a href="{{ route('product.reduceByOne', ['id'=>$product['item']['id']]) }}">Reduce by 1</a></li>
+                            <li><a href="{{ route('product.remove', ['id'=>$product['item']['id']]) }}">Remove all</a></li>
                         </ul>
                     </div>
                 </li>

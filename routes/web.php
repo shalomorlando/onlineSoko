@@ -27,6 +27,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/add-to-cart/{id}',[
     'uses'=>'HomeController@getAddToCart', 'as'=> 'product.addToCart']);
+
+Route::get('/reduce/{id}', [
+    'uses'=>'HomeController@getReduceByOne',
+    'as' => 'product.reduceByOne'
+]);
+
+Route::get('/remove/{id}', [
+    'uses'=>'HomeController@getRemoveItem',
+    'as' => 'product.remove'
+]);
 Route::get('/shopping-cart',[
     'uses'=>'HomeController@getCart', 'as'=> 'product.shoppingCart']);
 
