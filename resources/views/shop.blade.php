@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
-    <title>Online Soko</title>
+    <title>Aren Shoes</title>
     <link rel="stylesheet" href="{{ URL::asset('css/shop.css')}}" /> 
     <link rel="stylesheet" href="bootstrap.min.css" />
     <script src="jquery.slim.min.js"></script>
@@ -21,19 +21,19 @@
 <body>
  <div class= "navigation">
     <ul>
-          <h4 style= "float:left" ;> Online Soko </h4> 
+          <h4 style= "float:left; color:white;"> Aren Shoes </h4> 
           <a style="padding-right:1em;" ><li style="float:right"><i class="fas fa-search"></i></li></a>
           <a style="padding-right:1em;" ><li style="float:right"><i class="fas fa-user-alt"></i></li></a>
           <a style="padding-right:1em;" ><li style="float:right"> <i class="fas fa-shopping-bag"></i></li></a>
      </ul>
-            <p class = "owner"> Shop Name: </p><br>
+            <p class = "owner">Aren_Shoeske</p><br>
             <p class = "ownerdetails">
-              Fenty Robyn is an international renowed product <br>
-              designer.His work is positioned midway between industry <br>
-              and handicraft, mass production and one of a kind.
+              Aren Shoeske is a Kenyan owned brand <br>
+              that specializes in quality designer sneakers at affordable prices.<br>
+              
             </p>
               <div class = "img-container">
-              <img src = "/shopimages/owner.jpg" alt = "Shop Owner" style = "width:350px" >
+              <img src = "/img/pant1.jpg" alt = "Shop Owner" style = "width:350px" >
               </div>
           </div>
 <br><br><br><br><br><br><br><br><br><br><br>
@@ -42,16 +42,16 @@
 <br><br>
 
 <div class = "text">
-          Our shop sells a variety of items,from kitchenware to 
-          home decor and a couple of clothes to help you keep 
+          Aren shoes  sells a variety of items,from hoodies to 
+          makeup brushes and ring sets to help you keep 
           up with the fashion trends.
           It is considered one of the best businesses due
-          to their consistent product demand.Great selections
-          at our online store . The cold season is here as you 
-          interact with your friends and family, remember 
-          to dress warmer.
-          You can do that by purchasing quality items at our shop.
-          We also do door step deliveries and work places,all to your preference.
+          to their consistent product quality.Great selections
+          at our online store . Contact us to reserve any item. 
+          Our open time is from 10:00 a.m  from Monday to Saturday. 
+          
+          Deposit is required before delivery which is done freely within the CBD and at a fee depending on where
+          you are. Exchanging of items is permitted only when shoes are returned in the same condition.
 </div>
 
 <br><br>
@@ -62,7 +62,7 @@
 </div>
 </div>
 <p class ="products">
-  Product By Shopname :
+  Product By Aren ShoesKE:
   </p>
   <div class = "product">
       @foreach ($products as $item)
