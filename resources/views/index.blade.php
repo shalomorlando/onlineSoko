@@ -25,7 +25,7 @@
             Cart
     </li>
 </a>
-    <a href="#" style="color: #1b1e21" >
+    <a href="{{route ('checkout') }}" style="color: #1b1e21" >
         <li>
             payment
         </li>

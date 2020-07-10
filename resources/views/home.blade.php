@@ -30,7 +30,15 @@
         </li>
     </a>
 </ul>
-
+@if(Session::has('success'))
+<divclass="row">
+<div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+    <div id="charge-message" class="alert alert-success">
+        {{Session::get('success') }}
+    </div>
+</div>
+</div>
+@endif
 <div class="product-grid container">
     @foreach ($products ?? '' as $item)
     <div class="product-item">

@@ -23,7 +23,7 @@
                 Cart
             </li>
         </a>
-        <a href="#" style="color: #1b1e21" >
+        <a href="{{route ('checkout') }}" style="color: #1b1e21" >
             <li>
                 payment
             </li>
@@ -61,8 +61,8 @@
 </div>
 <hr>
 <div class = "row container">
-    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 container">
-        <button type="button" class="btn btn-success">Checkout</button>
+    <a class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 container">
+        <a href="{{ route ('checkout')}}" type="button" class="btn btn-success">Checkout</a>
     </div>
 </div>
     @else
