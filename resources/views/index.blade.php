@@ -15,11 +15,6 @@
             featured
         </li>
     </a>
-    <a href="#" style="color: #1b1e21">
-        <li>
-            history
-        </li>
-    </a>
    <a href="{{route ('product.shoppingCart') }}"style="color: #1b1e21" >
     <li >
             Cart

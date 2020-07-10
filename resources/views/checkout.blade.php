@@ -13,11 +13,6 @@
                 featured
             </li>
         </a>
-        <a href="#" style="color: #1b1e21">
-            <li>
-                history
-            </li>
-        </a>
         <a href="{{route ('product.shoppingCart') }}" style="color: #1b1e21" >
             <li >
                 Cart
@@ -32,7 +27,7 @@
 </div>
 
 
-<div class="row container">
+<div class="row container" style="margin:auto;">
     <div class="col-sm-6 col-md-offset-4 col-sm-offset-3 container" >
         <h1>Checkout</h1>
         <h4>Your Total Is: Ksh  {{ $total }}</h4>
@@ -45,7 +40,7 @@
                 <div class="col-xs-12 container">
                     <div class="form-group container">
                         <label for="name">Name</label>
-                        <input type="text" id="name" class="form-control container" required>
+                        <input type="text" id="name" class="form-control container" required value="{{ Auth::user()->name }}">
                     </div>
                 </div>
 

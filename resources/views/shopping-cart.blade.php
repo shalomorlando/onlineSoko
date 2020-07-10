@@ -13,11 +13,6 @@
             featured
         </li>
         </a>
-        <a href="#" style="color: #1b1e21">
-            <li>
-                history
-            </li>
-        </a>
         <a href="#"style="color: #1b1e21" >
             <li class="active-item">
                 Cart
@@ -38,9 +33,9 @@
         <ul class="list-group">
             @foreach($products as $product)
                 <li class ="list-group-item" style="display: flex; justify-content: space-around">
-                    <span class="badge" style="size:5px">{{ $product['qty'] }}</span>
-                    <strong>{{ $product['item']['name'] }}</strong>
-                    <div class="btn-group">
+                    <span class="badge" style="size:5px; flex:1;">{{ $product['qty'] }}</span>
+                    <strong style="flex: 1;">{{ $product['item']['name'] }}</strong>
+                    <div class="btn-group" style="flex: 1;">
                         <button type="button" class="btn btn-primary btn-xs dropdown-toogle " data-toggle="dropdown">
                             Action <span class="caret"></span></button>
                         <ul class="dropdown-menu">
@@ -67,7 +62,7 @@
 </div>
     @else
 <div class = " container">
-    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 container">
+    <div style=" display: flex; justify-content:center;" class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 container">
         <h2>No Items in Cart</h2>
     </div>
 </div>
