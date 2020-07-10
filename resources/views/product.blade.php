@@ -6,57 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 </head>
 <body>
-    <div class = "navigation">
-        <ul>
-            <img src = "/shopimages/logo.jpg" alt ="logo"  width= "80px"style= "float:left";>
-            <li style="float:right">SHOP</li>
-            <li style="float:right">BLOG</li>
-            <li style="float:right"> CART</li>
-        </ul>
-    </div>
-
+<nav class="nav-bar">
+        <div>
+            <h1>Online Soko</h1>
+        </div>
+        <div>
+            <i class="fas fa-search"></i>
+            <a href="/home"><i class="fas fa-user-alt"></i></a>
+            <i class="fas fa-shopping-bag"></i>
+        </div>
+    </nav>
     <br><br><br><br><br>
 
     <div class = "product-card">
+    @foreach ($product as $item)
         <div class = "product-image">
-            <img src = "/shopimages/marble_plate.jpg" style = "width:370px; height:400px" >
+            <img src = "{{ asset('uploads/pictures/' . $item['image'])}}" style = "width:370px; height:350px" >
         </div>
         <div class = "product_details">
             <br><br><br><br>
-            <h2><u>Marble Plate Set</u></h2><br>
-            <h3>Two marble dinner plates<br> 
-            Available in black and white</h3><br>
-            <h4>$19.99</h4><br><br>
+            <p id = "title">{{$item['name']}}</p><br>
+            <p id = "description">{{$item['description']}}<br> 
+        </p><br>
+            <p id = "shillings">Ksh{{$item['price']}} </p><br><br>
+            
+            <h2 id="stock">{{$item['quantity']}} in Stock</h2>
+          <a href="{{route('product.addToCart',['id'=>$item['id']])}}">  <h2 id="stock-cart"> Add to Cart</h2></a>
         </div>
+        @endforeach
     </div>
     <br><br><br>
+     <h2 style = "text-align:center"> You may also like </h2>
+    <div class = "product">
+      @foreach ($mightAlsoLike as $element)
+      <div class="card">
 
-    <div class = "other-products">
-        <h2>You may also like...</h3>
-        <div class="column-grid">
-            
-            <div class="other-product-card">
-                <img src="/shopimages/background1.jpg" alt="Balenciaga " style="width:200px">
-                <p>Balenciaga Arena High <br> Ksh.4500</p>
-            </div>
-
-            <div class="other-product-card">
-                <img src="/shopimages/balenciaga2.jpg" alt="Black Cutlery Set" style="width:200px">
-                <p>Black Cutlery Set <br>Ksh. 700</p>
-            </div>
-
-            <div class="other-product-card">
-                <img src="/shopimages/fila.jpg" alt="Fila1" style="width:200px">
-                <p>Yellow Fila<br>Ksh. 700</p>
-            </div>
-
-            <div class="other-product-card">
-                <img src="/shopimages/fila1.jpg" alt="ila2" style="width:200px">
-                <p>White Fila<br> Ksh. 1000</p>
-            </div>
-
-        </div>
- 
+        <a href = "{{route('shop.show',$item->id)}}"><img src="{{ asset('uploads/pictures/' . $element['image'])}}"></a>
+      <p class= "item">{{$element['name']}}</p>
+      <p>KSH.{{$element['price']}}</p>
+      
+      
+        
+  </div>
+  @endforeach
+</div>
  
         
 

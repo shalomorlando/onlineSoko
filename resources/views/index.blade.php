@@ -35,8 +35,8 @@
 
     <div class="product-grid container">
         @foreach ($products ?? '' as $item)
-            <div class="product-item" style="min-width: 300px">
-                <img src="{{ asset('uploads/pictures/' . $item['image'])}}">
+            <div class="product-item" style="min-width:300px">
+            <a href = "{{route('shop.show',$item->id)}}"> <img src="{{ asset('uploads/pictures/' . $item['image'])}}"></a>
                 <p>{{$item['name']}}</p>
                 @if (strlen($item['description'])>31)
                     <h3>{{substr($item['description'],0,29)}}...</h3>
