@@ -15,7 +15,7 @@ ul {
 
 li i{
   display: block;
-  color: black;
+  color: white;
   text-align: center;
   padding-right:3em ;
   
@@ -28,7 +28,7 @@ li a:hover:not(.active) {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
-  background-color:#F7E3A3;
+  background: rgba(31, 72, 126,1);;
 }
 .img-container{
   display: block;
@@ -47,12 +47,13 @@ li a:hover:not(.active) {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
-  height:360px;
+  height:320px;
   top: 80px;
   left: 450px;
   position: absolute;
   z-index:99;
   column-span : all;
+  border: 10px solid #FFFFFF;
 }
 .shopdetails
 {   text-align:center;
@@ -77,6 +78,7 @@ li a:hover:not(.active) {
     margin-right: 200px;
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 20px;
+    color:white;
 }
 
 h4{
@@ -97,6 +99,7 @@ h2{
   font-weight: 600;
   letter-spacing: 1.5px;
   padding-bottom: 4px;
+  color:white;
 }
 .ownerdetails
 {
@@ -104,14 +107,16 @@ h2{
   font-weight: normal;
   font-size: 16px;
   margin-bottom: -50px;
+  color:white;
 }
 .products
 {
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1.5px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-top:0px;
 }
 .product{
   padding: 10px 0;
