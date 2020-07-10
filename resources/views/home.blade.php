@@ -14,11 +14,6 @@
             featured
         </li>
     </a>
-    <a href="#" style="color: #1b1e21">
-        <li>
-            history
-        </li>
-    </a>
     <a href="{{route ('product.shoppingCart') }}"style="color: #1b1e21" >
         <li >
             Cart
@@ -30,7 +25,15 @@
         </li>
     </a>
 </ul>
-
+@if(Session::has('success'))
+<divclass="row">
+<div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+    <div id="charge-message" class="alert alert-success">
+        {{Session::get('success') }}
+    </div>
+</div>
+</div>
+@endif
 <div class="product-grid container">
     @foreach ($products ?? '' as $item)
     <div class="product-item">

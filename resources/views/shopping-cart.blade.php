@@ -13,17 +13,12 @@
             featured
         </li>
         </a>
-        <a href="#" style="color: #1b1e21">
-            <li>
-                history
-            </li>
-        </a>
         <a href="#"style="color: #1b1e21" >
             <li class="active-item">
                 Cart
             </li>
         </a>
-        <a href="#" style="color: #1b1e21" >
+        <a href="{{route ('checkout') }}" style="color: #1b1e21" >
             <li>
                 payment
             </li>
@@ -38,14 +33,15 @@
         <ul class="list-group">
             @foreach($products as $product)
                 <li class ="list-group-item" style="display: flex; justify-content: space-around">
-                    <span class="badge" style="size:5px">{{ $product['qty'] }}</span>
-                    <strong>{{ $product['item']['name'] }}</strong>
-                    <div class="btn-group">
+                    <span class="badge" style="size:5px; flex:1;">{{ $product['qty'] }}</span>
+                    <strong style="flex: 1;">{{ $product['item']['name'] }}</strong>
+                    <div class="btn-group" style="flex: 1;">
                         <button type="button" class="btn btn-primary btn-xs dropdown-toogle " data-toggle="dropdown">
-                            Action <span class="caret"></span></button>
+                            Action <span class="caret"></span>
+                        </button>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Reduce by 1</a></li>
-                            <li><a href="#">Reduce All</a></li>
+                            <li><a href="{{ route('product.reduceByOne', ['id'=>$product['item']['id']]) }}">Reduce by 1</a></li>
+                            <li><a href="{{ route('product.remove', ['id'=>$product['item']['id']]) }}">Remove all</a></li>
                         </ul>
                     </div>
                 </li>
@@ -61,13 +57,13 @@
 </div>
 <hr>
 <div class = "row container">
-    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 container">
-        <button type="button" class="btn btn-success">Checkout</button>
+    <a class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 container">
+        <a href="{{ route ('checkout')}}" type="button" class="btn btn-success">Checkout</a>
     </div>
 </div>
     @else
 <div class = " container">
-    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 container">
+    <div style=" display: flex; justify-content:center;" class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 container">
         <h2>No Items in Cart</h2>
     </div>
 </div>

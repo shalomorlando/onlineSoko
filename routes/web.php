@@ -27,11 +27,24 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/add-to-cart/{id}',[
     'uses'=>'HomeController@getAddToCart', 'as'=> 'product.addToCart']);
+
+Route::get('/reduce/{id}', [
+    'uses'=>'HomeController@getReduceByOne',
+    'as' => 'product.reduceByOne'
+]);
+
+Route::get('/remove/{id}', [
+    'uses'=>'HomeController@getRemoveItem',
+    'as' => 'product.remove'
+]);
 Route::get('/shopping-cart',[
     'uses'=>'HomeController@getCart', 'as'=> 'product.shoppingCart']);
 
-
-
+Route::get('/checkout', [ 'uses' => 'HomeController@getCheckout',
+    'as'=> 'checkout']);
+Route::post('/checkout',[
+    'uses' => 'HomeController@postCheckout',
+    'as' => 'checkout']);
 
 //New experimental routes by Shalom and Nirel
 Route::get('/store/storefront', 'StoresController@index');
@@ -66,7 +79,7 @@ Route::post('/item_model','controller@add');
 Route::get('/shop', function(){
     $products = Item::all();
     return view('shop')->with('products', $products);
-   
+
 });
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 
